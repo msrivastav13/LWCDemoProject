@@ -1,0 +1,24 @@
+<template>
+    <c-search-input onsearch={handleSearch}> </c-search-input>
+    <div class="c-container">
+        <div class="slds-align_absolute-center">
+            Search Results from Youtube :
+        </div>
+        <template for:each={items} for:item="result">
+            <lightning-layout pull-to-boundary="small" key={result.id}>
+                <lightning-layout-item flexibility="auto" padding="horizontal-small" size="12">
+                    <lightning-card title={result.snippet.title} >
+                        <p class="slds-p-horizontal_small">
+                            {result.snippet.description}
+                        </p>
+                        <div class="slds-media__figure">
+                            <a href="https://www.youtube.com/watch?v={result.id.videoId}" target="_blank">
+                                <img src={result.snippet.thumbnails.high.url} style="height:100px;" alt="Placeholder" />
+                            </a>
+                        </div>
+                    </lightning-card>
+                </lightning-layout-item>
+                </lightning-layout>
+        </template>
+    </div>
+</template>

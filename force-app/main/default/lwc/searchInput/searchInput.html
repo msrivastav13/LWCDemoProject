@@ -1,0 +1,22 @@
+<template>
+    <div class="c-container">
+        <lightning-layout multiple-rows="true" horizontal-align="center" vertical-align="center">
+            <lightning-layout-item flexibility="auto" size="6">
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="text-input-id-1">Enter search term</label>
+                    <div class="slds-form-element__control">
+                        <lightning-input type="search" id="text-input-id-1" placeholder="Enter Yoututbe Search Term" value={searchString} onchange={handleKeyChange}></lightning-input>
+                    </div>
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item flexibility="auto" size="4" padding="horizontal-small">
+                <div class="wrap">
+                    <lightning-button variant="brand" label="Search" onclick={handleClick}></lightning-button>
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item flexibility="auto" padding="around-large" size="6">
+                <p> You searched for {searchString}</p>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+</template>

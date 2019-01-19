@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/search-input": [
+                "searchInput/searchInput.js"
+            ],
+            "c/youtube-search-lwc": [
+                "youtubeSearchLWC/youtubeSearchLWC.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ]
+}

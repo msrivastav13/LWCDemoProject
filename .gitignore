@@ -1,0 +1,6 @@
+### DX related gitignore ####
+.DS_Store
+.sfdx
+.project
+.salesforce
+sfdx-project.json
